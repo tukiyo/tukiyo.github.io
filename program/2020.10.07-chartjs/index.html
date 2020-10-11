@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Pie Chart</title>
+	<meta charset=utf-8>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
+	<script>
+	window.chartColors = {
+	       red: 'rgb(255, 99, 132)',
+	       orange: 'rgb(255, 159, 64)',
+	       yellow: 'rgb(255, 205, 86)',
+	       green: 'rgb(75, 192, 192)',
+	       blue: 'rgb(54, 162, 235)',
+	       purple: 'rgb(153, 102, 255)',
+	       grey: 'rgb(201, 203, 207)'
+	};
+	</script>
+</head>
+
+<body>
+	<h1>パートナー選び 条件を付けるとしたら(日本版)</h1>
+	<div id="canvas-holder" style="width:40%">
+		<canvas id="chart-area"></canvas>
+	</div>
+	<div id="remining"></div>
+
+	条件絞り込みボタン
+	<button id="filter1">異性であること</button>
+	<button id="filter2">身長は平均以上であること</button>
+	<button id="filter3">都内在住 (1400万人)</button>
+	<button id="filter4">30歳代であること</button>
+	<button id="filter5">年収が平均以上であること</button>
+
+	<script>
+		function writeTotal(num) {
+			document.getElementById('remining').innerHTML = "対象: " + parseInt(num) + "人";
+		}
+		var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+
+		var currentPercent = 1;
+		var total = 1.265 * 10000 * 10000; // 1.265億人
+
+		function calcRemining(percent) {
+			writeTotal(total * percent);
+			return [ total * percent, total * (1 - percent) ];
+		}
+
+		var config = {
+			type: 'pie',
+			data: {
+				datasets: [{
+					data: [
+						1,
+					],
+					backgroundColor: [
+						window.chartColors.red,
+						window.chartColors.orange,
+						//window.chartColors.yellow,
+						//window.chartColors.green,
+						//window.chartColors.blue,
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'対象',
+					'対象外',
+					//'Yellow',
+					//'Green',
+					//'Blue'
+				]
+			},
+			options: {
+				responsive: true
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('chart-area').getContext('2d');
+			window.myPie = new Chart(ctx, config);
+		};
+
+		// filter1
+		document.getElementById('filter1').addEventListener('click', function() {
+			document.getElementById('filter1').disabled = true;
+			currentPercent = currentPercent * 0.5;
+			config.data.datasets[0].data = calcRemining(currentPercent);
+			window.myPie.update();
+		});
+
+		// filter2
+		document.getElementById('filter2').addEventListener('click', function() {
+			document.getElementById('filter2').disabled = true;
+			currentPercent = currentPercent * 0.5;
+			config.data.datasets[0].data = calcRemining(currentPercent);
+			window.myPie.update();
+		});
+
+		// filter3
+		document.getElementById('filter3').addEventListener('click', function() {
+			document.getElementById('filter3').disabled = true;
+			currentPercent = currentPercent * 0.11;
+			config.data.datasets[0].data = calcRemining(currentPercent);
+			window.myPie.update();
+		});
+
+		// filter4
+		document.getElementById('filter4').addEventListener('click', function() {
+			document.getElementById('filter4').disabled = true;
+			currentPercent = currentPercent * 0.12;
+			config.data.datasets[0].data = calcRemining(currentPercent);
+			window.myPie.update();
+		});
+
+		// filter5
+		document.getElementById('filter5').addEventListener('click', function() {
+			document.getElementById('filter5').disabled = true;
+			currentPercent = currentPercent * 0.5;
+			config.data.datasets[0].data = calcRemining(currentPercent);
+			window.myPie.update();
+		});
+
+		var colorNames = Object.keys(window.chartColors);
+		writeTotal(total);
+	</script>
+</body>
