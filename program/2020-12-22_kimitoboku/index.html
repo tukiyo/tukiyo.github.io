@@ -22,6 +22,8 @@
 	border-width:1px;
 	border-style:solid;
     }
+    .color1 { color: blue; }
+    .color2 { color: green; }
     </style>
 </head>
 <body onLoad="sample1();">
@@ -44,8 +46,8 @@ function original() {
 	var txt = document.getElementById("txt");
 	var result = document.getElementById("result");
 	var tmp = document.getElementById("txt").innerHTML;
-	tmp = tmp.replace(/甲/g, "<font color='blue'>甲</font>");
-	tmp = tmp.replace(/乙/g, "<font color='red'>乙</font>");
+	tmp = tmp.replace(/甲/g, "<font class=color1>甲</font>");
+	tmp = tmp.replace(/乙/g, "<font class=color2>乙</font>");
 	result.innerHTML = tmp;
 }
 
@@ -53,8 +55,8 @@ function convert_boku() {
 	var txt = document.getElementById("txt");
 	var result = document.getElementById("result");
 	var tmp = txt.innerHTML;
-	tmp = tmp.replace(/甲/g, "<font color='blue'>僕</font>");
-	tmp = tmp.replace(/乙/g, "<font color='red'>君</font>");
+	tmp = tmp.replace(/甲/g, "<font class=color1>僕</font>");
+	tmp = tmp.replace(/乙/g, "<font class=color2>君</font>");
 	result.innerHTML = tmp;
 }
 
@@ -63,8 +65,8 @@ function convert_ore() {
 	var txt = document.getElementById("txt");
 	var result = document.getElementById("result");
 	var tmp = txt.innerHTML;
-	tmp = tmp.replace(/甲/g, "<font color='blue'>俺</font>");
-	tmp = tmp.replace(/乙/g, "<font color='red'>お前</font>");
+	tmp = tmp.replace(/甲/g, "<font class=color1>俺</font>");
+	tmp = tmp.replace(/乙/g, "<font class=color2>お前</font>");
 	result.innerHTML = tmp;
 }
 
