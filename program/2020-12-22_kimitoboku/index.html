@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>僕と君</title>
+    <meta name="description" content="A classless CSS framework to write modern websites using only HTML.">
+    <meta name="keywords" content="newcss,new.css,css,xz,css framework,classless css,xz.style">
+    <meta property="og:title" content="new.css">
+    <meta property="og:url" content="https://newcss.net">
+    <meta property="og:description" content="A classless CSS framework to write modern websites using only HTML.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://newcss.net/_assets/og.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+</head>
+<body onLoad="sample1();">
+    <h1>契約書を読みやすくする君</h1>
+
+    <p>↓ ここに文章を貼り付けて ↓</p>
+    <div id="txt" style="width:100%; height:10em; background-color:#ddd; overflow:scroll;" contentEditable=true></div>
+    <div>
+    <button onClick="original();">元</button>
+    <button onClick="convert_boku();">変換(僕、君)</button>
+    <button onClick="convert_ore();">変換(俺、お前)</button>
+    </div>
+
+    <div id="result" style="width:100%;"></div>
+
+<script>
+
+function original() {
+	var txt = document.getElementById("txt");
+	var result = document.getElementById("result");
+	var tmp = document.getElementById("txt").innerHTML;
+	tmp = tmp.replace(/甲/g, "<font color='blue'>甲</font>");
+	tmp = tmp.replace(/乙/g, "<font color='green'>乙</font>");
+	result.innerHTML = tmp;
+}
+
+function convert_boku() {
+	var txt = document.getElementById("txt");
+	var result = document.getElementById("result");
+	var tmp = txt.innerHTML;
+	tmp = tmp.replace(/甲/g, "<font color='blue'>僕</font>");
+	tmp = tmp.replace(/乙/g, "<font color='green'>君</font>");
+	result.innerHTML = tmp;
+}
+
+
+function convert_ore() {
+	var txt = document.getElementById("txt");
+	var result = document.getElementById("result");
+	var tmp = txt.innerHTML;
+	tmp = tmp.replace(/甲/g, "<font color='blue'>俺</font>");
+	tmp = tmp.replace(/乙/g, "<font color='green'>お前</font>");
+	result.innerHTML = tmp;
+}
+
+// thanks: https://note.com/takecyan/n/nd3dc7a6412c3
+function sample1() {
+var heredoc = function() {/*
+　　　　　　　　　　コンサルティング契約書
+
+委任者○○○○を甲、受任者○○○○を乙として、甲乙間において下記のとおり〇〇業務委任契約を締結する。
+
+（業務の委任及び受任）
+第１条　 甲は乙に下記業務を委任し、乙はこれを受任する。
+一 〇〇における指導、評価、〇〇書類の作成を含むアドバイス
+二 前号に必要となる以下の業務
+①
+②
+③
+三 その他付属業務
+２ 受任した業務の処理に関連して、前項各号以外の手続が必要となったときは、別途甲乙協議して決定する。
+
+（受任業務の処理）
+第２条 乙は甲の承諾を得て他のコンサルタントと共同して業務を処理し、あるいは他の専門家に、関連する業務を処理又は補助させることができる。
+
+（委任者・受任者の責務）
+第３条 甲は乙に対して、業務の処理に必要となる情報を提示し、業務の処理に関し積極的かつ全面的に乙に協力し、乙は誠実に業務を処理するものとする。
+
+（着手金及び必要経費の取扱い）
+第４条 本件業務の報酬を金○○○○とし、甲は乙に下記のとおり支払う。
+着手金　金○○○○円（本件契約締結後〇日以内）
+残金　金○○○○円（申請後〇日以内）
+２ 甲は、業務の処理に関して生ずる、旅費、宿泊費、日当・交通費、その他必要経費の実費額を、乙の請求後〇日以内に乙に支払う。
+３ 甲は理由の如何を問わず、乙に着手金の返還を求めることができない。
+
+（報酬の支払い）
+第５条 甲は、業務が終了したときは、直ちに報酬として金○○○○円を乙に支払う。
+２ 乙はこの報酬を請求するときは、その計算書を甲に交付するものとする。
+３ 甲が乙の承諾なしに申請を取下げ等により終了させ、又は正当な理由なしにこの契約を解約したとき、若しくは甲の責任により業務の処理を不能にしたときでも、乙は甲に第１項の報酬を請求することができる。甲が報酬を支払わないときは、乙は甲からの預かり金と報酬とを相殺することができる。
+
+（契約の解除）
+第６条 甲及び乙は、相手方がこの契約に違反したとき、又は著しい不信行為をしたときは、いつでもこの契約を解除することができる。
+２ 前項によりこの契約が解除されたときは、甲及び乙は遅滞なく債権債務を清算し、契約の終了に伴う必要な措置を講ずるものとする。
+
+以上の合意の成立を証するため、この契約書２通を作成して甲と乙とが記名押印のうえ各自その１通を所持する。
+令和 年 月 日
+
+（甲：依頼者）
+住所
+氏名
+
+（乙：コンサルタント）
+住所
+氏名
+*/}.toString().split(/\/\*|\*\//)[1];
+
+	heredoc = heredoc.replace(/\r\n|\n|\r/g, '<br>');
+
+	var txt = document.getElementById("txt");
+	txt.innerHTML = heredoc;
+}
+</script>
