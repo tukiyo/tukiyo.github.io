@@ -13,14 +13,24 @@
     <meta property="og:image" content="https://newcss.net/_assets/og.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <style>
+    div#txt {
+	width:100%;
+	height:10em;
+	overflow-y:scroll;
+	border-color:#686868;
+	border-width:1px;
+	border-style:solid;
+    }
+    </style>
 </head>
 <body onLoad="sample1();">
     <h1>契約書を読みやすくする君</h1>
 
     <p>↓ ここに文章を貼り付けて ↓ サンプル<a href="https://note.com/takecyan/n/nd3dc7a6412c3"> 1 </a> </p>
 
-    <div id="txt" style="width:100%; height:10em; background-color:#ddd; overflow:scroll;" contentEditable=true></div>
-    <div>
+    <div id="txt" contentEditable=true></div>
+    <div style="padding-top:0.5em;">
     <button onClick="original();">元</button>
     <button onClick="convert_boku();">変換(僕、君)</button>
     <button onClick="convert_ore();">変換(俺、お前)</button>
@@ -35,7 +45,7 @@ function original() {
 	var result = document.getElementById("result");
 	var tmp = document.getElementById("txt").innerHTML;
 	tmp = tmp.replace(/甲/g, "<font color='blue'>甲</font>");
-	tmp = tmp.replace(/乙/g, "<font color='green'>乙</font>");
+	tmp = tmp.replace(/乙/g, "<font color='red'>乙</font>");
 	result.innerHTML = tmp;
 }
 
@@ -44,7 +54,7 @@ function convert_boku() {
 	var result = document.getElementById("result");
 	var tmp = txt.innerHTML;
 	tmp = tmp.replace(/甲/g, "<font color='blue'>僕</font>");
-	tmp = tmp.replace(/乙/g, "<font color='green'>君</font>");
+	tmp = tmp.replace(/乙/g, "<font color='red'>君</font>");
 	result.innerHTML = tmp;
 }
 
@@ -54,7 +64,7 @@ function convert_ore() {
 	var result = document.getElementById("result");
 	var tmp = txt.innerHTML;
 	tmp = tmp.replace(/甲/g, "<font color='blue'>俺</font>");
-	tmp = tmp.replace(/乙/g, "<font color='green'>お前</font>");
+	tmp = tmp.replace(/乙/g, "<font color='red'>お前</font>");
 	result.innerHTML = tmp;
 }
 
