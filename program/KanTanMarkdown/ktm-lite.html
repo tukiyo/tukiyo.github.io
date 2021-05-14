@@ -9,7 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width" />
-	<style>#previewer:after,nav:after{content:".";display:block;font-size:0;clear:both;visibility:hidden}body{margin:0;padding:0;position:relative}body.onDragover{border:5px dashed #99cde1}nav{margint:0}nav #leftNav{float:left}nav #rightNav{float:right}nav:after{height:0}#attach{width:100%;border-top:1px solid gray;border-bottom:1px solid gray;display:none}#attach #attachForm{box-sizing:border-box;width:100%;height:100%;display:none}#attach #attachForm input[type=file]{width:100%}#attach #filer{box-sizing:border-box;width:100%;height:150px;overflow:auto;display:none}#attach #filer input{width:300px}#attach #pasteArea{box-sizing:border-box;width:100%;border:1px solid gray;text-align:center}#attach #attachToggleButton,#attach #previewToggleButton{width:50%}#wrapper{overflow:auto}#wrapper #editorTabWrapper{box-sizing:border-box;width:50%;height:100%;float:left;border-top:none;display:none;margin:0;padding:0}#wrapper #editorTabWrapper #editorTabContents{box-sizing:border-box;width:100%;height:calc(100% - 20px);marign:0;padding:0}#wrapper #editorTabWrapper #editorTabContents #cssEditor,#wrapper #editorTabWrapper #editorTabContents #editor{box-sizing:border-box;resize:none;width:100%;height:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;margin:0}#wrapper #editorTabWrapper #editorTabContents #cssEditor{display:none}#wrapper #editorTabWrapper #editorTabs{box-sizing:border-box;border:0;width:100%;height:20px;margin:0;padding:0}#wrapper #editorTabWrapper #editorTabs li{box-sizing:border-box;list-style:none;float:left;width:50%;height:100%;text-align:center;margin-left:0;border-top:0;border-right:1px solid gray;border-bottom:1px solid gray;border-left:1px solid gray;border-radius:0 0 5px 5px}#importDialog,.popupMenu{border:1px solid gray;position:absolute}#wrapper #editorTabWrapper #editorTabs li a{display:block;width:100%;height:100%;text-decoration:none;color:#000}#previewer,.previewMode #previewer{height:auto;overflow:auto}#wrapper #editorTabWrapper #editorTabs li.selected{background-color:#7a9cd3}#wrapper #editorTabWrapper.fullWidth{width:100%}#previewer{box-sizing:border-box;margin:0 auto}.editMode #previewer{width:50%;height:100%}#previewer:empty{border:0}#previewer:focus{outline:0}#previewer:after{height:0}.popupMenu{display:none;margin:0;padding:0;background-color:#fff}.popupMenu>ul{list-style-type:none;margin:0;padding:0}.popupMenu>ul>li{margin:0}#onlineMenu>ul>li>a{box-sizing:border-box;text-decoration:none;display:block;margin:0;padding:10px;width:100%;height:100%;color:#000}#onlineMenu>ul>li>a:hover{background-color:#99cde1}#importDialog{width:440px;padding:20px;display:none;background-color:#fff}#importDialog ul.buttonArea{list-style-type:none;margin:0;padding:0}#importDialog ul.buttonArea li{display:block;float:left}#importDialog ul.buttonArea li button{height:35px;padding-left:20px;padding-right:20px}.initialState #editorTabWrapper{display:block!important;width:100%!important}.initialState #editor{margin-top:5px!important;font-size:large!important;height:90vh!important}.initialState #attach,.initialState #editorTabs,.initialState #previewer,.initialState nav{display:none!important}@media print{nav{display:none}#previewer{border:0!important;margin:0!important;padding:0!important}}#drawArea,#drawArea #canvasWrapper #baseCanvas,#drawArea #canvasWrapper #mainCanvas,#drawArea #canvasWrapper #workCanvas{position:absolute}#drawArea{top:0;left:0;width:100vw;height:100vh;background-color:gray;display:none}#drawArea #canvasWrapper{box-sizing:border-box;float:left;width:calc(100% - 200px);height:100%;overflow:auto;position:relative;padding:5px 15px 15px 5px}#drawArea .color3,#drawArea .color9{box-sizing:border-box;float:left;border:1px solid #000;margin:0;padding:0}#drawArea #drawControllWrapper{position:relative;background-color:#fff;float:left;width:200px;height:100%}#drawArea div{width:100%}#drawArea button{display:block;width:100%;border:1px solid #000;background-color:#fff}#drawArea button.selected{background-color:#7a9cd3}#drawArea .float50{box-sizing:border-box;float:left;width:50%}#drawArea .float25{box-sizing:border-box;float:left;width:25%}#drawArea .color9{width:11.1%}#drawArea .color3{width:33.3%}#drawArea .color[name=c_ff0000]{background-color:red}#drawArea .color[name=c_0000ff]{background-color:#00f}#drawArea .color[name=c_34A853]{background-color:#34A853}#drawArea .color[name=c_000000]{background-color:#000}#drawArea .color[name=c_clear],#drawArea .color[name=c_ffffff]{background-color:#fff}#drawArea .clearfix:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden}</style>
+	<style>#previewer:after,nav:after{content:".";display:block;font-size:0;clear:both;visibility:hidden}body{margin:0;padding:0;position:relative}body.onDragover{border:5px dashed #99cde1}nav{margint:0}nav #leftNav{float:left}nav #rightNav{float:right}nav:after{height:0}#attach{width:100%;border-top:1px solid gray;border-bottom:1px solid gray;display:none}#attach #attachForm{box-sizing:border-box;width:100%;height:100%;display:none}#attach #attachForm input[type=file]{width:100%}#attach #filer{box-sizing:border-box;width:100%;height:150px;overflow:auto;display:none}#attach #filer input{width:300px}#attach #pasteArea{box-sizing:border-box;width:100%;border:1px solid gray;text-align:center}#attach #attachToggleButton,#attach #previewToggleButton{width:50%}#wrapper{overflow:auto}#wrapper #editorTabWrapper{box-sizing:border-box;width:50%;height:100%;float:left;border-top:none;display:none;margin:0;padding:0}#wrapper #editorTabWrapper #editorTabContents{box-sizing:border-box;width:100%;height:calc(100% - 20px);marign:0;padding:0}#wrapper #editorTabWrapper #editorTabContents #cssEditor,#wrapper #editorTabWrapper #editorTabContents #editor{box-sizing:border-box;resize:none;width:100%;height:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;margin:0}#wrapper #editorTabWrapper #editorTabContents #cssEditor{display:none}#wrapper #editorTabWrapper #editorTabs{box-sizing:border-box;border:0;width:100%;height:20px;margin:0;padding:0}#wrapper #editorTabWrapper #editorTabs li{box-sizing:border-box;list-style:none;float:left;width:50%;height:100%;text-align:center;margin-left:0;border-top:0;border-right:1px solid gray;border-bottom:1px solid gray;border-left:1px solid gray;border-radius:0 0 5px 5px}#importDialog,.popupMenu{border:1px solid gray;position:absolute}#wrapper #editorTabWrapper #editorTabs li a{display:block;width:100%;height:100%;text-decoration:none;color:#000}#previewer,.previewMode #previewer{height:auto;overflow:auto}#wrapper #editorTabWrapper #editorTabs li.selected{background-color:#7a9cd3}#wrapper #editorTabWrapper.fullWidth{width:100%}#previewer{box-sizing:border-box;margin:0 auto}.editMode #previewer{width:50%;height:100%}#previewer:empty{border:0}#previewer:focus{outline:0}#previewer:after{height:0}.popupMenu{display:none;margin:0;padding:0;background-color:#fff}.popupMenu>ul{list-style-type:none;margin:0;padding:0}.popupMenu>ul>li{margin:0}#onlineMenu>ul>li>a{box-sizing:border-box;text-decoration:none;display:block;margin:0;padding:10px;width:100%;height:100%;color:#000}#onlineMenu>ul>li>a:hover{background-color:#99cde1}#importDialog{width:440px;padding:20px;display:none;background-color:#fff}#importDialog ul.buttonArea{list-style-type:none;margin:0;padding:0}#importDialog ul.buttonArea li{display:block;float:left}#importDialog ul.buttonArea li button{height:35px;padding-left:20px;padding-right:20px}.initialState #editorTabWrapper{display:block!important;width:100%!important}.initialState #editor{margin-top:5px!important;font-size:large!important;height:90vh!important}.initialState #attach,.initialState #editorTabs,.initialState #previewer,.initialState nav{display:none!important}@media print{nav{display:none}#previewer{border:0!important;margin:0!important;padding:0!important}}#drawArea,#drawArea #canvasWrapper #baseCanvas,#drawArea #canvasWrapper #mainCanvas,#drawArea #canvasWrapper #workCanvas{position:absolute}#drawArea{top:0;left:0;width:100vw;height:100vh;background-color:gray;display:none}#drawArea #canvasWrapper{box-sizing:border-box;float:left;width:calc(100% - 200px);height:100%;overflow:auto;position:relative;padding:5px 15px 15px 5px}#drawArea .color3,#drawArea .color9{float:left;border:1px solid #000;margin:0;padding:0}#drawArea #drawControllWrapper{position:relative;background-color:#fff;float:left;width:200px;height:100%}#drawArea div{width:100%}#drawArea button{display:block;width:100%;border:1px solid #000;background-color:#fff}#drawArea button.selected{background-color:#7a9cd3}#drawArea .float50{box-sizing:border-box;float:left;width:50%}#drawArea .float25{box-sizing:border-box;float:left;width:25%}#drawArea .color9{box-sizing:border-box;width:11.1%}#drawArea .color3{box-sizing:border-box;width:33.3%}#drawArea .color[name=c_ff0000]{background-color:red}#drawArea .color[name=c_0000ff]{background-color:#00f}#drawArea .color[name=c_34A853]{background-color:#34A853}#drawArea .color[name=c_000000]{background-color:#000}#drawArea .color[name=c_clear],#drawArea .color[name=c_ffffff]{background-color:#fff}#drawArea .clearfix:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden}</style>
 	<style id="previewerStyle"></style>
 	<title>無題</title>
 </head>
@@ -43,7 +43,7 @@
  * 標準のCSSに戻したいときはCSSを引き継がずに強制アップデートしてください
  * また、CSSの変更はプレビューしないと反映しません。
  */
- 
+
 #leftNav {
     display: visible;
 }
@@ -71,13 +71,15 @@
 }
 
 #previewer {
-    min-height: 97%;
+    min-height: 98%;
     max-width: 800px;
     word-wrap: break-word;
-    color: #3B454E;
+    color: #575757;
     line-height: 1.9;
     background-color: white;
-    padding: 45px;
+    padding: 3em 6em;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
     /* アンチエイリアス */
     transform: rotate(0.0001deg);
     /* 記事が浮き上がるように */
@@ -90,12 +92,17 @@
     margin-bottom: 0 !important;
 }
 
+.editMode #previewer {
+    padding: 0em 1em;
+    margin: 0;
+}
+
 html {
 	font-size: 62.5%;
 }
 body {
 	font-family: roboto, sans-serif;
-	background-color: #f6f6f4;
+	background-color: #f8f9fa;
 	font-size: 1.4rem;
         color: #3B454E;
 }
@@ -103,11 +110,11 @@ h2 {
 	border-bottom: 1px;
 }
 #editor {
-	font-family: roboto, sans-serif;
-	font-size: 16px;
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 14px;
 	line-height: 1.5;
 	color: rgb(34, 34, 34);
-	padding: 10px;
+	padding: 0.5em 0.5em;
 }
 
 a {
@@ -151,7 +158,7 @@ h6:hover a.anchor {
 }
 h1 {
     line-height:1.4;
-    font-size: 40px;
+    font-size: 32px;
 }
 h2 {
     font-size: 25px;
@@ -414,12 +421,14 @@ pre code {
 }
 pre {
     background-color: #f5f5f5;
+    color: #333;
     font-size: 12px;
     font-family: roboto, sans-serif;
-    line-height: 1.8;
+    line-height: 1.42857143;
     overflow: auto;
-    padding: 1em 32px;
-    margin: 1.5em -32px;
+    padding: 0.5em 1em;
+    margin: .7em -1em;
+    border-radius: 4px;
 }
 pre code,
 pre tt {
@@ -432,26 +441,40 @@ pre tt {
     text-align:center;
 }
 
-.info,
-.warn,
-.alert {
+p.info,
+p.warn,
+p.success,
+p.green,
+p.alert,
+p.blue,
+p.yellow,
+p.red {
     font-size: 14px;
     line-height: 19px;
     padding: .75rem 1.25rem;
     border-radius: .25rem;
     margin: 1rem 0px 1rem 0px;;
 }
-.info {
+.info,
+.blue {
     color: #004085;
     background-color: #cce5ff;
     border: 1px solid #b8daff;
 }
-.warn {
+.success,
+.green {
+    color: #437d5f;
+    background-color: #dff0d8;
+    border: 1px solid #cdeac1;
+}
+.warn,
+.yellow {
     color: #856404;
     background-color: #fff3cd;
     border: 1px solid #ffeeba;
 }
-.alert {
+.alert,
+.red {
     color: #721c24;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
@@ -470,6 +493,22 @@ pre tt {
         box-shadow: 0 0 black;
     }
 }
+
+/* START_CODE_TITLE */
+f {
+    display:inline;
+    color: #333;
+    background-color: #ddd;
+    font-size: 0.8em;
+    position: fixed;
+    margin-top: -1.1em;
+    margin-left: -1em;
+    padding: 0 1em;
+}
+f + pre {
+    margin-top: 0;
+}
+/* END_CODE_TITLE */
 
 </textarea>
 		</div>

@@ -1,6 +1,16 @@
+
 # かんたんMarkdown
 
 * http://tatesuke.github.io/KanTanMarkdown/ にいくつかの改良をしました。
+
+
+| 種類  | サイズ | url | 特徴 |
+|:--|:--|:--|:--|
+| ライト版 | 約90KB| [ktm-lite.html](http://tukiyo.github.io/program/KanTanMarkdown/ktm-lite.html) | syntax hilightなし |
+| 標準版 | 約160KB| [ktm-std.html](http://tukiyo.github.io/program/KanTanMarkdown/ktm-std.html) | syntax hilightあり |
+| フル版 | 約430KB| [ktm-full.html](http://tukiyo.github.io/program/KanTanMarkdown/ktm-full.html) | syntax hilightあり、図形描画あり |
+| 書き方サンプル | - | [sample.md](http://tukiyo.github.io/program/KanTanMarkdown/sample.md) | |
+
 
 ## 使い方
 
@@ -12,6 +22,8 @@
 かんたんMarkdownは**完**全に**単**一のHTMLファイルで動作します。したがって、JavaScriptが動作するブラウザさえあればどこでもMarkdownを利用することができます。
 
 ## シンタックスハイライト
+
+<f>シンタックイライト</f>
 
 ```java
 import java.util.*;
@@ -27,6 +39,8 @@ public class FizzBuzz {
 
 * [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/)
 
+<f>シーケンス図</f>
+
 ```html
 <div class="sequence">
 a->b:call
@@ -39,6 +53,8 @@ a->b:call
 ## フローチャート
 
 * [flowchart.js](https://adrai.github.io/flowchart.js/)
+
+<f>フローチャート</f>
 
 ```html 
 <div class="flow">
@@ -57,26 +73,48 @@ st->op1->e
 
 ## 背景色
 
-### info
+### blue
 
-<p class="info">info</p>
+<p class="blue">blue</p>
 
-```html
-<p class="danger">info</p>
-```
 
-### alert
+<f class=blue>青</f>
 
 ```html
-<p class="alert">alert</p>
+<p class="blue">blue</p>
+<p class="info">blue</p>
 ```
 
-<p class="alert">alert</p>
+### green
 
-### warn
+<p class="green">green</p>
+
+
+<f class=green>緑</f>
 
 ```html
-<p class="warn">warn</p>
+<p class="green">green</p>
+<p class="success">green</p>
 ```
 
-<p class="warn">warn</p>
+### yellow
+
+<p class="yellow">yellow</p>
+
+<f class=yellow>黄</f>
+
+```html
+<p class="yellow">yellow</p>
+<p class="warn">yellow</p>
+```
+
+### red
+
+<p class="red">red</p>
+
+<f class=red>赤</f>
+
+```html
+<p class="red">red</p>
+<p class="alert">red</p>
+```
